@@ -1,12 +1,6 @@
 # 🧮 Scientific Calculator
 
 <p align="center">
-
-# 🧮 Scientific Calculator
-
-</p>
-
-<p align="center">
   <strong>Handle engineering, business, and everyday calculations with ease</strong>
 </p>
 

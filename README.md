@@ -1,4 +1,4 @@
-# 📚 Scientific Calculator
+# 🧮 Scientific Calculator
 
 <p align="center">
   <strong>Handle engineering, business, and everyday calculations with ease</strong>
@@ -20,6 +20,8 @@ Welcome to **Scientific Calculator**, a sleek and intuitive web application desi
 - **📱 Fully Responsive**: Optimized for desktops, tablets, and mobile devices.
 - **💾 Lightweight & Fast**: Runs instantly with no installation or backend required.
 - **🎨 Premium UI**: Glassmorphic overlays, smooth transitions, and a high-contrast modern layout.
+- **🧭 Built-in Examples**: Left and right guide panels show practical usage examples for root, trig, power, memory, and business calculations.
+- **⌨️ Keyboard Friendly**: Type numbers and operators directly, use Enter to calculate, Backspace to delete, and Escape to clear.
 - **⚡ Real-time Updates**: Interactive button handling ensures fast and dynamic calculation feedback.
 
 ---
@@ -29,17 +31,17 @@ Welcome to **Scientific Calculator**, a sleek and intuitive web application desi
 | Layer          | Technology Used                                                         |
 | :------------- | :---------------------------------------------------------------------- |
 | **Frontend**   | Semantic HTML5, CSS3 (Vanilla), JavaScript (ES6+)                       |
-| **Styling**    | Flexbox, CSS Grid, Custom Variables, Backdrop Filters for Glassmorphism |
-| **Storage**    | Browser `localStorage` is not used in this version                      |
+| **Styling**    | Flexbox, CSS Grid, Backdrop Filters, Responsive Layouts                |
+| **Behavior**   | Event-driven UI interactions, keyboard input handlers, and calculation helpers |
 | **Typography** | System fonts / modern UI styling                                         |
 
 ---
 
 ## 📂 Project Structure
 
-- [index.html](index.html): Main entry point and application structure.
-- [styles.css](styles.css): Styling, theme tokens, and responsive layout.
-- [script.js](script.js): Calculator logic, calculation helpers, and UI interactions.
+- [index.html](index.html): Main entry point, layout, and example panels.
+- [styles.css](styles.css): Styling, responsive layout, and visual polish.
+- [script.js](script.js): Calculator logic, scientific function handling, memory tools, and keyboard support.
 
 ---
 
@@ -79,20 +81,28 @@ http://127.0.0.1:8000
 4. **Engineering Helpers**
    - Use `1/x`, `|x|`, `n!`, `mod`, `x²`, and `x³` for common engineering and technical work.
 
+5. **Quick Examples**
+   - Read the left and right guide panels for ready-to-use examples such as root, trig, logarithms, modulus, percentages, and memory operations.
+
+6. **Keyboard Support**
+   - Type directly with the keyboard.
+   - Press `Enter` or `=` to calculate.
+   - Press `Backspace` to delete.
+   - Press `Escape` to clear.
+
 ---
 
 ## 🔮 Future Roadmap
 
-- Business presets for tax, discount, and percentage calculations.
-- History panel with saved expressions.
-- Keyboard shortcut support.
-- Export/import of calculation history.
+- Add a persistent history panel for saved expressions.
+- Add business presets for tax, discount, and percentage workflows.
+- Add export/share options for calculation results.
 
 ---
 
 ## 👨‍💻 Author
 
-VIJAYAPANDIANT.T. Design and Implementation
+**Vijayapandian** Design and Implementation
 
 ---
 

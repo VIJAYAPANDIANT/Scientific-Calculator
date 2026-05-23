@@ -18,7 +18,7 @@ body {
 }
 
 .calculator-shell {
-  width: min(100%, 960px);
+  width: min(100%, 1260px);
   padding: 12px 0 0;
   position: sticky;
   top: 20px;
@@ -53,6 +53,67 @@ h1 {
   max-width: 680px;
   color: #cbd5e1;
   line-height: 1.6;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.9fr) minmax(360px, 1.5fr) minmax(220px, 0.9fr);
+  gap: 18px;
+  align-items: stretch;
+  height: 100%;
+}
+
+.guide-panel {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.9));
+  border: 1px solid rgba(103, 232, 249, 0.22);
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 18px 50px rgba(14, 116, 144, 0.18);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.guide-panel h2 {
+  margin: 0 0 12px;
+  font-size: 1.05rem;
+  color: #f8fafc;
+}
+
+.guide-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1 1 auto;
+}
+
+.guide-list div {
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.label {
+  display: inline-flex;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.22);
+  color: #f0f9ff;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.guide-list p {
+  margin: 10px 0 0;
+  color: #cbd5e1;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .calculator {
@@ -126,8 +187,8 @@ h1 {
   width: 100%;
   border: none;
   border-radius: 16px;
-  padding: 20px;
-  font-size: 2rem;
+  padding: 32px 20px;
+  font-size: 2.8rem;
   text-align: right;
   background: rgba(2, 6, 23, 0.75);
   color: #f8fafc;
@@ -145,8 +206,8 @@ h1 {
 button {
   border: 0;
   border-radius: 18px;
-  padding: 16px 10px;
-  font-size: 1.02rem;
+  padding: 24px 10px;
+  font-size: 1.45rem;
   font-weight: 800;
   cursor: pointer;
   transition: transform 0.08s ease, box-shadow 0.12s ease, opacity 0.08s ease;
@@ -177,6 +238,16 @@ button:active {
   color: #111827;
 }
 
+@media (max-width: 960px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-shell {
+    width: min(100%, 820px);
+  }
+}
+
 @media (max-width: 640px) {
   body {
     padding: 16px 12px 28px;
@@ -191,12 +262,12 @@ button:active {
   }
 
   #display {
-    font-size: 1.4rem;
-    padding: 16px;
+    font-size: 1.7rem;
+    padding: 18px 8px;
   }
 
   button {
-    padding: 14px 8px;
-    font-size: 0.98rem;
+    padding: 16px 6px;
+    font-size: 1.08rem;
   }
 }

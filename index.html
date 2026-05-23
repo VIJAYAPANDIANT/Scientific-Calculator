@@ -11,77 +11,171 @@
     <div class="hero-copy">
       <p class="eyebrow">Engineering • Business</p>
       <h1>Scientific Calculator</h1>
-      <p class="subcopy">Built for technical calculations, business estimates, and fast memory work with a sticky, easy-to-scan layout.</p>
+      <p class="subcopy">Built for technical calculations, business estimates, and fast memory work with a sticky, easy-to-scan layout. Keyboard-friendly: type numbers, operators, press Enter to calculate, Backspace to delete, and Escape to clear.</p>
     </div>
 
-    <div class="calculator">
-      <div class="topbar">
-        <span class="badge">Pinned</span>
-        <span class="badge accent" id="memoryBadge">M: 0</span>
-        <span class="badge accent" id="modeBadge">DEG</span>
+    <div class="workspace">
+      <aside class="guide-panel left-panel">
+        <h2>How to use</h2>
+        <div class="guide-list">
+          <div>
+            <span class="label">Root</span>
+            <p>Tap <strong>√</strong>, then enter a value and press <strong>=</strong>.</p>
+          </div>
+          <div>
+            <span class="label">Sine</span>
+            <p>Tap <strong>sin</strong>, enter the angle, and press <strong>=</strong>.</p>
+          </div>
+          <div>
+            <span class="label">Tangent</span>
+            <p>Tap <strong>tan</strong>, add the angle, and press <strong>=</strong>.</p>
+          </div>
+          <div>
+            <span class="label">Power</span>
+            <p>Use <strong>xʸ</strong> for exponent work like <strong>2 xʸ 3</strong>.</p>
+          </div>
+          <div>
+            <span class="label">Cosine</span>
+            <p>Tap <strong>cos</strong>, enter the angle, and press <strong>=</strong>.</p>
+          </div>
+          <div>
+            <span class="label">Factorial</span>
+            <p>Enter a number, tap <strong>n!</strong>, then <strong>=</strong> (e.g., <strong>5 n! = 120</strong>).</p>
+          </div>
+          <div>
+            <span class="label">Parentheses</span>
+            <p>Use <strong>(</strong> and <strong>)</strong> to group expressions, e.g., <strong>(2+3)×4</strong>.</p>
+          </div>
+          <div>
+            <span class="label">Reciprocal</span>
+            <p>Enter a value, tap <strong>1/x</strong> to get its reciprocal.</p>
+          </div>
+          <div>
+            <span class="label">Absolute value</span>
+            <p>Tap <strong>|x|</strong> to get the absolute value of a number.</p>
+          </div>
+          <div>
+            <span class="label">Modulo</span>
+            <p>Use <strong>mod</strong> for remainder, e.g., <strong>10 mod 3 = 1</strong>.</p>
+          </div>
+        </div>
+      </aside>
+
+      <div class="calculator">
+        <div class="topbar">
+          <span class="badge">Pinned</span>
+          <span class="badge accent" id="memoryBadge">M: 0</span>
+          <span class="badge accent" id="modeBadge">DEG</span>
+        </div>
+
+        <div class="display-wrap">
+          <div id="history" class="history" aria-live="polite"></div>
+          <input id="display" type="text" value="0" aria-label="Calculator display" readonly />
+        </div>
+
+        <div class="button-grid">
+          <button class="func" data-action="memory-clear">MC</button>
+          <button class="func" data-action="memory-recall">MR</button>
+          <button class="func" data-action="memory-add">M+</button>
+          <button class="func" data-action="memory-subtract">M-</button>
+
+          <button class="func" data-action="clear">AC</button>
+          <button class="func" data-action="clear-entry">CE</button>
+          <button class="func" data-action="toggle-angle">DEG</button>
+          <button class="func" data-action="percent">%</button>
+
+          <button class="func" data-action="sin">sin</button>
+          <button class="func" data-action="cos">cos</button>
+          <button class="func" data-action="tan">tan</button>
+          <button class="func" data-action="asin">asin</button>
+
+          <button class="func" data-action="log">log</button>
+          <button class="func" data-action="ln">ln</button>
+          <button class="func" data-action="sqrt">√</button>
+          <button class="func" data-action="acos">acos</button>
+
+          <button class="func" data-action="reciprocal">1/x</button>
+          <button class="func" data-action="abs">|x|</button>
+          <button class="func" data-action="fact">n!</button>
+          <button class="func" data-action="mod">mod</button>
+
+          <button class="func" data-action="square">x²</button>
+          <button class="func" data-action="cube">x³</button>
+          <button class="func" data-action="pi">π</button>
+          <button class="func" data-action="e">e</button>
+
+          <button class="func" data-action="pow">xʸ</button>
+          <button class="num" data-value="(">(</button>
+          <button class="num" data-value=")">)</button>
+          <button class="func" data-action="toggle-sign">±</button>
+
+          <button class="num" data-value="7">7</button>
+          <button class="num" data-value="8">8</button>
+          <button class="num" data-value="9">9</button>
+          <button class="op" data-value="/">÷</button>
+
+          <button class="num" data-value="4">4</button>
+          <button class="num" data-value="5">5</button>
+          <button class="num" data-value="6">6</button>
+          <button class="op" data-value="*">×</button>
+
+          <button class="num" data-value="1">1</button>
+          <button class="num" data-value="2">2</button>
+          <button class="num" data-value="3">3</button>
+          <button class="op" data-value="-">−</button>
+
+          <button class="num" data-value="0">0</button>
+          <button class="num" data-value=".">.</button>
+          <button class="op" data-value="+">+</button>
+          <button class="func" data-action="equals">=</button>
+        </div>
       </div>
 
-      <div class="display-wrap">
-        <div id="history" class="history" aria-live="polite"></div>
-        <input id="display" type="text" value="0" aria-label="Calculator display" readonly />
-      </div>
-
-      <div class="button-grid">
-        <button class="func" data-action="memory-clear">MC</button>
-        <button class="func" data-action="memory-recall">MR</button>
-        <button class="func" data-action="memory-add">M+</button>
-        <button class="func" data-action="memory-subtract">M-</button>
-
-        <button class="func" data-action="clear">AC</button>
-        <button class="func" data-action="clear-entry">CE</button>
-        <button class="func" data-action="toggle-angle">DEG</button>
-        <button class="func" data-action="percent">%</button>
-
-        <button class="func" data-action="sin">sin</button>
-        <button class="func" data-action="cos">cos</button>
-        <button class="func" data-action="tan">tan</button>
-        <button class="func" data-action="asin">asin</button>
-
-        <button class="func" data-action="log">log</button>
-        <button class="func" data-action="ln">ln</button>
-        <button class="func" data-action="sqrt">√</button>
-        <button class="func" data-action="acos">acos</button>
-
-        <button class="func" data-action="reciprocal">1/x</button>
-        <button class="func" data-action="abs">|x|</button>
-        <button class="func" data-action="fact">n!</button>
-        <button class="func" data-action="mod">mod</button>
-
-        <button class="func" data-action="square">x²</button>
-        <button class="func" data-action="cube">x³</button>
-        <button class="func" data-action="pi">π</button>
-        <button class="func" data-action="e">e</button>
-
-        <button class="func" data-action="pow">xʸ</button>
-        <button class="num" data-value="(">(</button>
-        <button class="num" data-value=")">)</button>
-        <button class="func" data-action="toggle-sign">±</button>
-
-        <button class="num" data-value="7">7</button>
-        <button class="num" data-value="8">8</button>
-        <button class="num" data-value="9">9</button>
-        <button class="op" data-value="/">÷</button>
-
-        <button class="num" data-value="4">4</button>
-        <button class="num" data-value="5">5</button>
-        <button class="num" data-value="6">6</button>
-        <button class="op" data-value="*">×</button>
-
-        <button class="num" data-value="1">1</button>
-        <button class="num" data-value="2">2</button>
-        <button class="num" data-value="3">3</button>
-        <button class="op" data-value="-">−</button>
-
-        <button class="num" data-value="0">0</button>
-        <button class="num" data-value=".">.</button>
-        <button class="op" data-value="+">+</button>
-        <button class="func" data-action="equals">=</button>
-      </div>
+      <aside class="guide-panel right-panel">
+        <h2>Quick examples</h2>
+        <div class="guide-list">
+          <div>
+            <span class="label">Square root</span>
+            <p>Click <strong>√</strong>, type <strong>81</strong>, then <strong>=</strong> for <strong>9</strong>.</p>
+          </div>
+          <div>
+            <span class="label">Log</span>
+            <p>Use <strong>log</strong> with <strong>1000</strong> to get <strong>3</strong>.</p>
+          </div>
+          <div>
+            <span class="label">Business %</span>
+            <p>Enter <strong>200</strong>, tap <strong>%</strong>, then combine with <strong>+</strong> or <strong>-</strong>.</p>
+          </div>
+          <div>
+            <span class="label">Memory</span>
+            <p>Use <strong>M+</strong> and <strong>MR</strong> to store and reuse values.</p>
+          </div>
+          <div>
+            <span class="label">Cosine</span>
+            <p>Tap <strong>cos</strong>, enter <strong>60</strong>, then <strong>=</strong> for <strong>0.5</strong>.</p>
+          </div>
+          <div>
+            <span class="label">Factorial</span>
+            <p>Type <strong>5</strong>, tap <strong>n!</strong>, then <strong>=</strong> for <strong>120</strong>.</p>
+          </div>
+          <div>
+            <span class="label">Parentheses</span>
+            <p>Type <strong>(2+3)×4</strong> to get <strong>20</strong>.</p>
+          </div>
+          <div>
+            <span class="label">Reciprocal</span>
+            <p>Type <strong>8</strong>, tap <strong>1/x</strong>, then <strong>=</strong> for <strong>0.125</strong>.</p>
+          </div>
+          <div>
+            <span class="label">Absolute value</span>
+            <p>Type <strong>-15</strong>, tap <strong>|x|</strong>, then <strong>=</strong> for <strong>15</strong>.</p>
+          </div>
+          <div>
+            <span class="label">Modulo</span>
+            <p>Type <strong>10</strong>, tap <strong>mod</strong>, type <strong>3</strong>, then <strong>=</strong> for <strong>1</strong>.</p>
+          </div>
+        </div>
+      </aside>
     </div>
   </main>
 

@@ -399,6 +399,49 @@ for (const button of document.querySelectorAll('button')) {
   });
 }
 
+document.addEventListener('keydown', (event) => {
+  const key = event.key;
+
+  if (/^[0-9.]$/.test(key)) {
+    event.preventDefault();
+    handleValue(key);
+    return;
+  }
+
+  if (['+', '-', '*', '/', '^', '(', ')', '%'].includes(key)) {
+    event.preventDefault();
+    if (key === '%') {
+      handleAction('percent');
+      return;
+    }
+    appendValue(key);
+    return;
+  }
+
+  if (key === 'Enter' || key === '=') {
+    event.preventDefault();
+    handleAction('equals');
+    return;
+  }
+
+  if (key === 'Backspace') {
+    event.preventDefault();
+    handleAction('delete');
+    return;
+  }
+
+  if (key === 'Escape') {
+    event.preventDefault();
+    handleAction('clear');
+    return;
+  }
+
+  if (key === 'p' || key === 'P') {
+    event.preventDefault();
+    appendValue('π');
+  }
+});
+
 updateDisplay('0');
 updateHistory('');
 updateModeBadge();

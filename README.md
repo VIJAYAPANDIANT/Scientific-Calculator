@@ -1,7 +1,10 @@
-# 🧮 Scientific Calculator
 
+<h1 align="center">
+   <img src="https://em-content.zobj.net/source/microsoft-teams/337/abacus_1f9ee.png" alt="Abacus" width="40" style="vertical-align:middle; margin-right:8px;"/>
+   Scientific Calculator
+</h1>
 <p align="center">
-  <strong>Handle engineering, business, and everyday calculations with ease</strong>
+   <strong>Handle engineering, business, and everyday calculations with ease</strong>
 </p>
 
 <p align="center">

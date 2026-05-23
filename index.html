@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="calculator-shell">
+    <div class="hero-copy">
+      <p class="eyebrow">Engineering • Business</p>
+      <h1>Scientific Calculator</h1>
+      <p class="subcopy">Built for technical calculations, business estimates, and fast memory work with a sticky, easy-to-scan layout.</p>
+    </div>
+
+    <div class="calculator">
+      <div class="topbar">
+        <span class="badge">Pinned</span>
+        <span class="badge accent" id="memoryBadge">M: 0</span>
+        <span class="badge accent" id="modeBadge">DEG</span>
+      </div>
+
+      <div class="display-wrap">
+        <div id="history" class="history" aria-live="polite"></div>
+        <input id="display" type="text" value="0" aria-label="Calculator display" readonly />
+      </div>
+
+      <div class="button-grid">
+        <button class="func" data-action="memory-clear">MC</button>
+        <button class="func" data-action="memory-recall">MR</button>
+        <button class="func" data-action="memory-add">M+</button>
+        <button class="func" data-action="memory-subtract">M-</button>
+
+        <button class="func" data-action="clear">AC</button>
+        <button class="func" data-action="clear-entry">CE</button>
+        <button class="func" data-action="toggle-angle">DEG</button>
+        <button class="func" data-action="percent">%</button>
+
+        <button class="func" data-action="sin">sin</button>
+        <button class="func" data-action="cos">cos</button>
+        <button class="func" data-action="tan">tan</button>
+        <button class="func" data-action="asin">asin</button>
+
+        <button class="func" data-action="log">log</button>
+        <button class="func" data-action="ln">ln</button>
+        <button class="func" data-action="sqrt">√</button>
+        <button class="func" data-action="acos">acos</button>
+
+        <button class="func" data-action="reciprocal">1/x</button>
+        <button class="func" data-action="abs">|x|</button>
+        <button class="func" data-action="fact">n!</button>
+        <button class="func" data-action="mod">mod</button>
+
+        <button class="func" data-action="square">x²</button>
+        <button class="func" data-action="cube">x³</button>
+        <button class="func" data-action="pi">π</button>
+        <button class="func" data-action="e">e</button>
+
+        <button class="func" data-action="pow">xʸ</button>
+        <button class="num" data-value="(">(</button>
+        <button class="num" data-value=")">)</button>
+        <button class="func" data-action="toggle-sign">±</button>
+
+        <button class="num" data-value="7">7</button>
+        <button class="num" data-value="8">8</button>
+        <button class="num" data-value="9">9</button>
+        <button class="op" data-value="/">÷</button>
+
+        <button class="num" data-value="4">4</button>
+        <button class="num" data-value="5">5</button>
+        <button class="num" data-value="6">6</button>
+        <button class="op" data-value="*">×</button>
+
+        <button class="num" data-value="1">1</button>
+        <button class="num" data-value="2">2</button>
+        <button class="num" data-value="3">3</button>
+        <button class="op" data-value="-">−</button>
+
+        <button class="num" data-value="0">0</button>
+        <button class="num" data-value=".">.</button>
+        <button class="op" data-value="+">+</button>
+        <button class="func" data-action="equals">=</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

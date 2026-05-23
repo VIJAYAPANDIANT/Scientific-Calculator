@@ -106,7 +106,8 @@ python -m http.server 8000
 
 ## 👨‍💻 Author
 
-**Vijayapandian.T** Design and Implementation
+**Vijayapandian.T** <br>
+Design and Implementation
 
 ---
 

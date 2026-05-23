@@ -59,9 +59,10 @@ You can also serve it locally with:
 python -m http.server 8000
 ```
 
-Then visit:
+**Then visit**:
 
-http://127.0.0.1:8000
+- Live Demo: https://scientific-calculator-omega-eight.vercel.app
+- Local: http://127.0.0.1:8000
 
 ---
 
@@ -102,7 +103,7 @@ http://127.0.0.1:8000
 
 ## 👨‍💻 Author
 
-**Vijayapandian** Design and Implementation
+**Vijayapandian.T** Design and Implementation
 
 ---
 

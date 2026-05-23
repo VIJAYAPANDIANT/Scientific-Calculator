@@ -1,8 +1,9 @@
 
-<p align="center" style="display:flex; align-items:center; justify-content:center; gap:12px;">
-   <img src="https://em-content.zobj.net/source/microsoft-teams/337/abacus_1f9ee.png" alt="Abacus" width="48" height="48" style="vertical-align:middle; margin-right:8px;"/>
-   <span style="font-size:2.8rem; font-weight:700; vertical-align:middle; line-height:1;">Scientific Calculator</span>
-</p>
+<h1 align="center">
+   <img src="https://em-content.zobj.net/source/microsoft-teams/337/abacus_1f9ee.png" alt="Abacus" width="40" style="vertical-align:middle; margin-right:8px;"/>
+   Scientific Calculator
+</h1>
+
 <p align="center">
    <strong>Handle engineering, business, and everyday calculations with ease</strong>
 </p>
